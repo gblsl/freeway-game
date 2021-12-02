@@ -9,18 +9,18 @@ function mostraAtor() {
 
 function movimentaAtor() {
   if (keyIsDown(UP_ARROW)) {
-    yAtor -= 3;
+    yAtor -= 2.5;
   } else if (keyIsDown(DOWN_ARROW)) {
-    yAtor += 3;
+    yAtor += 2.5;
   } else if (keyIsDown(LEFT_ARROW)) {
-    xAtor -= 3;
+    xAtor -= 2.5;
   } else if (keyIsDown(RIGHT_ARROW)) {
-    xAtor += 3;
+    xAtor += 2.5;
   }
 }
 
 function verificaColisao() {
-  for(let i = 0; i < imagemCarros.length; i += 1) {
+  for(let i = 0; i < imagemCarros.length; i++) {
     colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarro, alturaCarro, xAtor, yAtor, 15);
     if (colisao) {
       colidiu();
